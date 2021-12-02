@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./estilos/estilos.css">
+
+  <title>Memoria</title>
+</head>
+
+<body>
+  <audio autoplay src="./audio/harrypotter.mp3"></audio>
+  <div id="contenedor-principal" class="container-fluid align-content-start flex-wrap d-flex bg-info">
+    <header class="container-fluid d-flex justify-content-center align-items-center">
+      <div class="col-3 d-flex justify-content-center">
+        <img id="logo" src="./img/Logo.png" alt="">
+      </div>
+      <div class="col-6 d-flex justify-content-center align-items-center">
+        <h1>MEMORY</h1>
+      </div>
+      <div class="col-3 d-flex justify-content-center align-items-center">
+        <img class="imgRecord" src="./img/record.png" alt="">
+        <span class="fw-bold ">
+
+          Tiempo Record</span>
+        <input type="text" name="tiempoRecord" id="tiempoRecord" disabled style="height: 40px;">
+      </div>
+
+    </header>
+    <div class="d-flex" style="width: 95%; height: 90%;">
+      <div id="lateral" class="col-3 d-flex flex-column justify-content-start align-items-center">
+        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+          <span class="fw-bold text-light">Tiempo</span>
+          <input type="text" name="tiempo" id="tiempo" value="" disabled>
+        </div>
+        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+          <span class="fw-bold text-info">Aciertos</span>
+          <input type="text" name="aciertos" id="aciertos" value="" disabled>
+        </div>
+        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+          <span class="fw-bold text-danger">Fallos</span>
+
+          <input type="text" name="fallos" id="fallos" value="" disabled>
+
+        </div>
+        <div class="cont-aviso d-flex flex-column justify-content-center ">
+          <div id="avisoAcertaste"
+            class="avisos bg-info justify-content-center align-items-center text-center text-light">
+            Bien Hecho,
+            acertaste!
+
+          </div>
+          <div id="avisoFallaste"
+            class="avisos bg-danger  justify-content-center align-items-center text-center text-light">
+            Upps,
+            fallaste!
+
+          </div>
+        </div>
+
+        <input type="button" class="btn-iniciar btn-info fw-bold m-1" value="Iniciar Juego" id="btn-iniciar">
+        <input type="button" class="btn-reiniciar btn-danger fw-bold m-1" value="Detener Juego" id="btn-reiniciar">
+
+      </div>
+      <div class="col-9 d-flex flex-column justify-content-center align-items-center d-flex">
+        <div id="tablero">
+          <table>
+            <tr>
+              <td id="0" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c0" class="cara trasera">
+                </div>
+              </td>
+              <td id="1" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c1" class="cara trasera">
+                </div>
+              </td>
+              <td id="2" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c2" class="cara trasera">
+                </div>
+              </td>
+              <td id="3" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c3" class="cara trasera">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td id="4" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c4" class="cara trasera">
+                </div>
+              </td>
+              <td id="5" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c5" class="cara trasera">
+                </div>
+              </td>
+              <td id="6" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c6" class="cara trasera">
+                </div>
+              </td>
+              <td id="7" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c7" class="cara trasera">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td id="8" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c8" class="cara trasera">
+                </div>
+              </td>
+              <td id="9" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c9" class="cara trasera">
+                </div>
+              </td>
+              <td id="10" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c10" class="cara trasera">
+                </div>
+              </td>
+              <td id="11" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c11" class="cara trasera">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td id="12" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c12" class="cara trasera">
+                </div>
+              </td>
+              <td id="13" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c13" class="cara trasera">
+                </div>
+              </td>
+              <td id="14" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c14" class="cara trasera">
+                </div>
+              </td>
+              <td id="15" class="carta">
+                <div class="cara frontal">
+                  <img src="./img/frontal.jpg" alt="">
+                </div>
+                <div id="c15" class="cara trasera">
+                </div>
+              </td>
+            </tr>
+          </table>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  justify-content-center align-content-center">
+                  Has ganado el juego!
+                  <div class="">
+                    <span class="fw-bold  text-light m-1">Tus Aciertos:</span>
+                    <input type="text" name="aciertos" id="aciertos" value="" disabled style="width: 30%;">
+                    <span class="fw-bold  text-light m-1">Tus Fallos:</span>
+                    <input type="text" name="fallos" id="fallos" value="" disabled style="width: 30%;">
+                    <span class="fw-bold m-1 text-light">Tiempo</span>
+                    <input type="text" name="tiempo" id="tiempo" value="" disabled style="width: 30%;">
+                  </div>
+                  <div id="nuevo-record" class="d-flex justify-content-center align-items-center m-5">
+                    <img src="./img/record.png" alt="imgRecord">
+                    <h4 id="h4-record" class="fw-bold  text-info m-1">Felicidades has alcanzado un Nuevo Record!</h4>
+                    <img src="./img/record.png" alt="imgRecord">
+                  </div>
+
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn-reiniciar btn btn-info" data-bs-dismiss="modal">Reiniciar
+                    Tablero</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+</body>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+
+</html>

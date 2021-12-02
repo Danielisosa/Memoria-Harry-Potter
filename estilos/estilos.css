@@ -1,0 +1,173 @@
+@import url("http://fonts.cdnfonts.com/css/harry-potter");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Harry Potter", sans-serif;
+}
+#contenedor-principal {
+  height: 800px;
+  padding: 0;
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+}
+/* HEADER*/
+header {
+  height: 80px;
+  background-color: black;
+  width: 100%;
+}
+h1 {
+  font-family: "Harry Potter", sans-serif;
+  color: lightgray;
+  font-size: 3rem;
+  margin-top: 7px;
+  text-shadow: 7px 7px 8px #ffc107;
+}
+#logo {
+  width: 280px;
+  height: 80px;
+}
+header div:nth-child(3) span {
+  color: #ffc107;
+  font-size: 1.3rem;
+  display: flex;
+  padding: 3px;
+}
+header div:nth-child(3) input {
+  width: 40%;
+}
+.imgRecord {
+  height: 60px;
+  width: 80px;
+}
+/* HEADER*/
+#lateral {
+  background-color: rgb(3, 3, 95);
+  opacity: 0.8;
+  border-right: 5px solid black;
+  height: 100%;
+}
+.puntajes {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 15px;
+}
+#lateral .avisos {
+  height: 150px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  text-shadow: 5px 5px 8px #000000;
+}
+span {
+  font-size: 1.5rem;
+}
+input {
+  width: 50%;
+  margin: 10px;
+  border: 3px solid #ffc107;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#avisoAcertaste {
+  display: none;
+}
+#avisoFallaste {
+  width: 80%;
+  height: 50px;
+  display: none;
+}
+#btn-iniciar,
+#btn-reiniciar {
+  padding: 10px;
+  border-radius: 25px;
+  border: 4px solid lightgray;
+  font-size: 1.5rem;
+  color: black;
+}
+/* TABLERO*/
+#tablero {
+  width: 70%;
+}
+table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+tr {
+  display: flex;
+}
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+  margin: 15px;
+  padding: 20px;
+  transition: all ease 0.5s;
+  position: relative;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  -webkit-perspective: 600px;
+}
+td,
+.carta,
+.cara,
+img {
+  width: 110px;
+  height: 140px;
+  border-radius: 5px;
+}
+td:hover {
+  transform: scale(1.09);
+}
+td.open {
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: visible;
+  cursor: none;
+}
+.cara {
+  position: absolute;
+  border: lightgray 3px groove;
+  box-shadow: 0px 0px 0px 2px black;
+}
+.trasera {
+  background-size: cover;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.modal-body {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 5px 5px 8px #ffc107;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-body div:first-child {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#nuevo-record {
+  width: 100%;
+  flex-wrap: nowrap;
+}
