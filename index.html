@@ -15,14 +15,14 @@
 <body>
   <audio autoplay src="./audio/harrypotter.mp3"></audio>
   <div id="contenedor-principal" class="container-fluid align-content-start flex-wrap d-flex bg-info">
-    <header class="container-fluid d-flex justify-content-center align-items-center">
-      <div class="col-3 d-flex justify-content-center">
+    <header class="container-fluid  d-flex justify-content-center align-items-center">
+      <div class="col-3 d-none d-md-flex justify-content-center">
         <img id="logo" src="./img/Logo.png" alt="">
       </div>
       <div class="col-6 d-flex justify-content-center align-items-center">
         <h1>MEMORY</h1>
       </div>
-      <div class="col-3 d-flex justify-content-center align-items-center">
+      <div class="col-3 d-none d-md-flex justify-content-center align-items-center">
         <img class="imgRecord" src="./img/record.png" alt="">
         <span class="fw-bold ">
 
@@ -32,16 +32,16 @@
 
     </header>
     <div class="d-flex" style="width: 95%; height: 90%;">
-      <div id="lateral" class="col-3 d-flex flex-column justify-content-start align-items-center">
-        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+      <div id="lateral" class="col-3 d-flex align-items-center">
+        <div class="d-flex justify-content-center align-items-center  puntajes">
           <span class="fw-bold text-light">Tiempo</span>
           <input type="text" name="tiempo" id="tiempo" value="" disabled>
         </div>
-        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+        <div class="d-flex justify-content-center align-items-center puntajes">
           <span class="fw-bold text-info">Aciertos</span>
           <input type="text" name="aciertos" id="aciertos" value="" disabled>
         </div>
-        <div class="d-flex justify-content-center align-items-center m-3 puntajes">
+        <div class="d-flex justify-content-center align-items-center puntajes">
           <span class="fw-bold text-danger">Fallos</span>
 
           <input type="text" name="fallos" id="fallos" value="" disabled>
