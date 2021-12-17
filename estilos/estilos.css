@@ -1,4 +1,7 @@
-@import url("http://fonts.cdnfonts.com/css/harry-potter");
+@font-face {
+  font-family: "Harry P";
+  src: url(HARRP__.TTF);
+}
 body {
   margin: 0;
   padding: 0;
