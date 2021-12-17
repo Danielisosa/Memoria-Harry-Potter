@@ -58,7 +58,7 @@ $(document).ready(function () {
         if (arrayCartas[aleatorio] == undefined) {
           $("#c" + aleatorio).css(
             "backgroundImage",
-            "url(../img/" + i + ".jpeg"
+            "url(./img/" + i + ".jpeg"
           );
           arrayCartas[aleatorio] = i;
           cont++;
