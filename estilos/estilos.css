@@ -1,20 +1,27 @@
-@font-face {
-  font-family: "Harry Potter";
+/* @font-face {
+  font-family: "Harry Potter", sans-serif;
   src: local("HARRP__.TTF"), url(../HARRP__.TTF);
-}
+} */
 body {
   margin: 0;
   padding: 0;
   font-family: "Harry Potter", sans-serif;
+  font-weight: bold;
 }
 #contenedor-principal {
+  width: 100%;
   height: 900px;
   padding: 0;
   background-image: url(../img/fondo.jpg);
   background-size: cover;
+  position: absolute;
+  top: 80px;
 }
 /* HEADER*/
 header {
+  position: absolute;
+  top: 0;
+  display: flex;
   height: 80px;
   background-color: black;
   width: 100%;
@@ -27,28 +34,29 @@ h1 {
   text-shadow: 7px 7px 8px #ffc107;
 }
 #logo {
-  width: 280px;
+  width: 240px;
   height: 80px;
 }
 header div:nth-child(3) span {
   color: #ffc107;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: flex;
-  padding: 3px;
+  margin: 3px;
 }
 header div:nth-child(3) input {
-  width: 40%;
+  width: 75px;
 }
 .imgRecord {
   height: 60px;
-  width: 80px;
+  width: 60px;
 }
-/* HEADER*/
+/* LATERAL*/
 #lateral {
   background-color: rgb(3, 3, 95);
   opacity: 0.8;
   border-right: 5px solid black;
-  height: auto;
+  width: 250px;
+  height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -67,7 +75,7 @@ header div:nth-child(3) input {
   font-size: 1.6rem;
   text-shadow: 5px 5px 8px #000000;
 }
-span {
+.subtitulos {
   font-size: 1.5rem;
 }
 input {
@@ -83,13 +91,15 @@ input {
   justify-content: center;
 }
 
-#avisoAcertaste {
+#avisoAcertaste,
+#avisoFallaste {
   display: none;
+  padding: 5px;
+  font-size: 1rem;
 }
 #avisoFallaste {
   width: 80%;
   height: 50px;
-  display: none;
 }
 #btn-iniciar,
 #btn-reiniciar {
@@ -110,7 +120,7 @@ input {
 }
 /* TABLERO*/
 #tablero {
-  width: 70%;
+  width: 90%;
 }
 table {
   width: 100%;
@@ -132,8 +142,8 @@ td {
   align-items: center;
   width: 30%;
   height: 40%;
-  margin: 15px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   transition: all ease 0.5s;
   position: relative;
   transform: rotateY(0deg);
@@ -145,8 +155,8 @@ td,
 .carta,
 .cara,
 img {
-  width: 110px;
-  height: 140px;
+  width: 7rem;
+  height: 9.5rem;
   border-radius: 5px;
 }
 td:hover {
@@ -177,7 +187,7 @@ td.open {
   align-items: center;
 }
 .modal-body div:first-child {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -187,45 +197,153 @@ td.open {
   width: 100%;
   flex-wrap: nowrap;
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
   .col-9 {
     width: 100%;
   }
+  #contenedor-principal {
+    height: 1100px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  #logo {
+    display: none;
+  }
   #lateral {
     position: absolute;
-    top: 900px;
     padding: 10px;
     width: 100%;
-    height: auto;
+    height: 370px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    border-right: 0;
+    border-bottom: 5px solid black;
   }
   .puntajes {
-    width: 30%;
+    width: 35%;
     margin: 5px;
     flex-direction: column;
-    padding: 8px;
+    padding: 5px;
+  }
+  .subtitulos {
+    font-size: 1.2rem;
+  }
+  input {
+    width: 50%;
   }
   #btn-iniciar,
   #btn-reiniciar {
-    width: 35%;
+    width: 30%;
+    padding: 4px;
+    font-size: 1rem;
   }
   .cont-aviso {
     width: 100%;
-    height: 150px;
+    height: 80px;
     align-items: center;
   }
+
   #lateral .avisos {
     width: 80%;
     height: 150px;
+  }
+  #content-secundario {
+    position: absolute;
+    top: 400px;
+  }
+  #tablero {
+    width: 100%;
+  }
+  td {
+    margin: 10px;
+    padding: 5px;
   }
   td,
   .carta,
   .cara,
   img {
     width: 4.5rem;
-    height: 7rem;
+    height: 6.5rem;
     border-radius: 3px;
+  }
+  .modal-body div:first-child {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 420px) {
+  header {
+    flex-direction: column;
+    height: 230px;
+  }
+  #contenedor-principal {
+    top: 230px;
+  }
+  .col-9 {
+    width: 100%;
+  }
+  #lateral {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 370px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: 0;
+    border-bottom: 5px solid black;
+  }
+  .puntajes {
+    width: 45%;
+    margin: 5px;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .subtitulos {
+    font-size: 1.2rem;
+  }
+  input {
+    width: 80%;
+  }
+  #btn-iniciar,
+  #btn-reiniciar {
+    width: 45%;
+    padding: 4px;
+    font-size: 1rem;
+  }
+  .cont-aviso {
+    width: 100%;
+    height: 80px;
+    align-items: center;
+  }
+
+  #lateral .avisos {
+    width: 80%;
+    height: 150px;
+  }
+  #content-secundario {
+    position: absolute;
+    top: 430px;
+  }
+  #tablero {
+    width: 100%;
+  }
+  td {
+    margin: 5px;
+    padding: 5px;
+  }
+  td,
+  .carta,
+  .cara,
+  img {
+    width: 4rem;
+    height: 6rem;
+    border-radius: 3px;
+  }
+  .modal-body div:first-child {
+    width: 90%;
+    font-size: 1.5rem;
   }
 }
